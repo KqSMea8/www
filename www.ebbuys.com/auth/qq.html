@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-cn">
+<head>
+    <!-- @fragment_top Start-->
+<meta charset="UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>QQ帐号安全登录</title>
+<meta name="keywords" content="QQ互联、QQ登录、安全登录、网站接入、腾讯开放平台">
+<meta name="description" content="接入QQ互联，可实现与腾讯各项服务的无缝连接，安全帐号登录体系，用户动态同步腾讯各社交平台，调用腾讯公司各业务服务。">
+<meta name="copyright" content="Tencent" >
+<meta name="author" content="rtx://tencent/sng/yuanyan" >
+<link rel="Shortcut Icon" href="https://imgcache.qq.com/qzone/openapi/favicon.ico?t=20130219" type="image/x-icon">
+<link rel="icon" href="https://imgcache.qq.com/qzone/openapi/favicon.ico?t=20130219" type="image/x-icon">
+<link href="https://imgcache.qq.com/open/connect/widget/pc/login/qlogin_v2.min.css?max_age=2592000&v=20140818" rel="stylesheet">
+<script type="text/javascript">
+    window.__start = +new Date();
+    
+    var _speedTiming = [+new Date];
+    (function error(monitorId){
+        window.onerror = function(errorMsg, url, lineNumber) {
+          var img = document.createElement('img');
+          var url = 'https://graph.qq.com/oauth2.0/report?';
+          var data = {
+            attr_id: 2775276,
+            uls: 'Script Error: ' + errorMsg + ', line:' + lineNumber + ', url:' + location.href + ' referer:' + document.referrer,
+            content_type: 0,
+            client_id: Q.getParameter('client_id')
+          }
+          for(var key in data){
+            if(url[url.length - 1] != '?')
+              url += '&';
+            url += key + '=' + encodeURIComponent(data[key]);
+          }
+          img.src = url;
+        };
+    })(302299);
+</script>
+<!-- @fragment_top End -->
+
+</head>
+<body style="overflow-x: hidden;">
+
+<div class="page_accredit page_error">
+    <!-- @header Start-->
+<div class="lay_top">
+    <div class="lay_top_inner">
+        <h1 class="logo text_hide">QQ登录</h1>
+        <div class="lat_top_other">
+            <a href="http://connect.qq.com" target="_blank" title="什么是QQ登录"><i class="icon_help_white"></i>QQ登录</a>
+            <span class="line">|</span>
+            <a href="http://connect.qq.com/toc/auth_manager?from=auth" id="auth_manager_link" target="_blank" title="登录授权管理">授权管理</a>
+            <span class="line">|</span>
+            <a href="http://connect.qq.com/manage" target="_blank" title="申请接入">申请接入</a>
+        </div>
+    </div>
+</div>
+<!-- @header End -->
+
+
+    <div class="lay_main lay_main_single">
+        <div class="lay_login_warn">
+            <div class="fn_login_warn">
+                
+                <!-- 以下对错误码为100008的情况单独处理 -->
+                <p><span class="warn_txt">
+                    
+                    redirect uri is illegal(100010)
+                    
+                    </span></p>
+                
+                <p class="warn_tips"></p>
+                
+                <p class="warn_tips">
+                    
+
+		    <a id="notice" href="http://wiki.connect.qq.com/%E4%BA%92%E8%81%94%E5%8A%A0%E5%BC%BA%E7%BD%91%E7%AB%99%E5%BA%94%E7%94%A8%E5%9B%9E%E8%B0%83%E5%9C%B0%E5%9D%80%E6%A0%A1%E9%AA%8C%E9%80%9A%E7%9F%A5" target="_blank" style="color:red;">通知: QQ互联加强网站应用回调地址校验</a>
+			<p></p>
+                    <a id="feed_back_link_err" href="http://support.qq.com/write.shtml?fid=780" target="_blank">点此报错</a>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <a id="feed_back_link_err" href="http://wiki.connect.qq.com/%E5%9B%9E%E8%B0%83%E5%9C%B0%E5%9D%80%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E4%BF%AE%E6%94%B9%E6%96%B9%E6%B3%95" target="_blank">解决方案</a>
+                    
+                    <span>&nbsp;</span>
+                    
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- @footer Start-->
+<div class="lay_footer">
+    <div class="lay_footer_inner">
+        <div class="lay_footer_r">
+            <a href="http://zc.qq.com/chs/index.html" title="注册QQ号" target="_blank">注册QQ号</a>
+            <a href="http://support.qq.com/write.shtml?fid=780" target="_blank" title="反馈意见" id="feed_back_link">反馈意见</a>
+        </div>
+    </div>
+</div>
+<!-- @footer End -->
+
+</div>
+<!--@fragment_bottom Start-->
+<script src="https://imgcache.qq.com/c/=/open/connect/widget/pc/login/pt_adapt.js,qlogin_v2.js?v=20181229" charset="UTF-8"></script>
+<script>
+    document.write('<script src="https://tajs.qq.com/stats?sId=52725868" charset="UTF-8"><\/script>');
+</script>
+<!--@fragment_bottom End -->
+
+
+<script>
+    // PC错误页曝光量
+    Q.monitor(302300);
+    // support论坛逻辑
+    var feed_back_link = document.getElementById("feed_back_link_err");
+    var dmRe = /http:\/\/([^/]*)\/?/i;
+    window.crtDomain = 'http://www.ifunto.com' || (Q.getParameter && Q.getParameter("redirect_uri"));
+    var errcode = '100010';
+    var dmHost = window.crtDomain.match(dmRe);
+    if(feed_back_link) {
+        feed_back_link.href += ("&SSTAG="+encodeURIComponent((dmHost&&dmHost[1])+".errorcode"+errcode));
+    }
+
+    var t = +new Date() - Q.getParameter('auth_time');
+
+    // 授权失败
+    Q.mta('LoginFailed', {Appid: Q.appid, Ext1: Q.getParameter('error')});
+
+    // mm上报注册
+    var uin = Q.getCookie('uin') || 0;
+    if (uin && (/^o([0-9]+)$/).test(uin)) uin = parseFloat(RegExp.$1);
+
+    Q.mm.init(1000128, uin, 'QC_WEB');
+    Q.mm.report(Q.cgi, Q.getParameter('error'), t);
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="no-focus" lang="zh"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <title>跳轉提示 | 海豚PHP - eBbuys.COM</title>
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <!-- END Icons -->
+    <!-- Stylesheets -->
+    <!-- Bootstrap and OneUI CSS framework -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/layer/2.3/skin/layer.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/web/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/layer/2.3/layer.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layer/2.3/skin/layer.css"
+          id="layui_layer_skinlayercss" style="">
+    <script type="text/javascript" src="../static/web/js/jQuery.textSlider.js"></script>
+    <script type="text/javascript" src="../static/web/js/swiper.js"></script>
+    <script type="text/javascript" src="../static/web/js/scrollLoading.js"></script>
+    <!-- <script type="text/javascript" src="../static/web/js/common.js"></script> -->
+    <script type="text/javascript" src="../static/web/js/game_search.js"></script>
+    <!-- END Stylesheets -->
+</head>
+<body>
+<div class="wrapper message" id="home"
+     style="display:;position: absolute;top: 0;right: 0;bottom: 0;left: 0;    background-color: #fff;">
+    <div class="page msg_warn js_show">
+        <div class="weui-msg">
+            <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+            <div class="weui-msg__text-area">
+                <h2 class="weui-msg__title">操作成功</h2>
+                <p class="weui-msg__desc" style="color:#5cb85c;">登入成功</p>
+                <p class="weui-msg__desc">頁面自動 <a id="href" href="/member/index">跳轉</a> 等待時間： <b id="wait">1</b>秒<a
+                        href="/index.php"> 返回首頁</a></p>
+            </div>
+            <div class="weui-msg__opr-area">
+                <p class="weui-btn-area">
+                    <a href="/member/index" class="weui-btn weui-btn_primary">立即跳轉</a>
+                    <a href="javascript:stop();" class="weui-btn weui-btn_default">禁止跳轉</a>
+                </p>
+            </div>
+            <div class="weui-msg__extra-area">
+                <div class="weui-footer">
+                    <p class="weui-footer__links">
+                        <a href="javascript:void(0);" class="weui-footer__link">www.ibbuys.com-安全的遊戲交易系統</a>
+                    </p>
+                    <p class="weui-footer__text">Copyright © 2008-2019 ebbuys.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function () {
+        var wait = document.getElementById('wait'),
+            href = document.getElementById('href').href;
+        var interval = setInterval(function () {
+            var time = --wait.innerHTML;
+            if (time <= 0) {
+                location.href = href;
+                clearInterval(interval);
+            }
+            ;
+        }, 1000);
+
+        // 禁止跳轉
+        window.stop = function () {
+            clearInterval(interval);
+        }
+    })();
+</script>
+
+</body>
+</html>

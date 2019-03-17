@@ -1,0 +1,157 @@
+.container-faq {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: hidden;
+}
+.part-8 .fa-title {
+    font-size: 24px;
+    color: #383838;
+    border-left: 4px solid #00b7ee;
+    text-indent: 16px;
+    margin: 20px 0 0px
+}
+
+.part-8 .tab-content {
+    margin-top: 30px
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel-group {
+    padding-bottom: 8px
+}
+
+.part-8 .ebbuys-list-job .head {
+    padding: 0 0 0 29px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    background-color: #d2d2d2;
+    margin-bottom: 15px
+}
+
+.part-8 .ebbuys-list-job .head span {
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: #fff
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel {
+    background-color: #fbfbfb;
+    box-shadow: -.7px .7px 2px 0 rgba(0, 0, 0, .1);
+    margin-bottom: 20px
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel .ebbuys-panel-heading {
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel .ebbuys-panel-heading span {
+    display: block;
+    min-height: 20px;
+    float: left;
+    font-size: 14px;
+    color: #383838
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel .ebbuys-panel-heading i {
+    position: absolute;
+    right: 29px;
+    top: 12px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/2017042600027_f992d07.png) no-repeat center center
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel .ebbuys-panel-body {
+    padding: 10px 0 60px 20px;
+    font-size: 14px;
+    background-color: #eef2f4;
+    line-height: 2.5;
+    overflow: hidden;
+    display: none
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel .ebbuys-panel-body .left {
+    float: left;
+    width: 8%;
+    overflow: hidden;
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel .ebbuys-panel-body .right {
+    float: left;
+    width: 92%;
+    font-size: 15px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel .ebbuys-panel-body .right h5{
+	display: none;
+}
+.part-8 .ebbuys-list-job .ebbuys-panel .ebbuys-panel-body .right img{
+	width: 100%;
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel.active {
+    background-color: #e9ecf1
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel.active .ebbuys-panel-heading {
+    background-color: #e9ecf1
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel.active .ebbuys-panel-body {
+    display: block;
+    background-color: #e9ecf1;
+    overflow: hidden;
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel.active .a {
+    background-color: #e9ecf1
+}
+
+.part-8 .ebbuys-list-job .ebbuys-panel.active i {
+    background: url(../images/2017042600028_8f1e6d7.png) no-repeat center center
+}
+
+.part-8 .ebbuys-list-job .job-open {
+    display: block;
+    overflow: hidden
+}
+
+.part-8 .ebbuys-list-job .job-open:hover span {
+    color: #00b7ee
+}
+
+.part-8 .ebbuys-list-job .a {
+    width: 50px;
+    text-align: center;
+    background-color: #e9ecf1
+}
+
+.part-8 .ebbuys-list-job .b {
+    margin-left: 26px;
+    width: auto
+}
+
+.part-8 #pages {
+    text-align: right;
+    margin-bottom: 51px
+}
+
+.part-8 #pages a {
+    font-size: 16px;
+    margin: 0 4px;
+    color: #171717
+}
+
+.part-8 #pages a.current {
+    color: #0098e6
+}
